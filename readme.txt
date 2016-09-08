@@ -1,2 +1,2 @@
 Git is a discontributed version control system.
-git is free  contributed software.
+git is free  contributed software under the gpl.
