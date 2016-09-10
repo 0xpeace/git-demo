@@ -1,0 +1,20 @@
+题目来自MIT6.00 第四课
+在农场里有鸡和猪，可以数出头有20个，腿有56只，分别求鸡和猪的数量。
+想法：通过for循环来匹配鸡和猪的数量，头的数量代表总的动物数量,例如：1只鸡的话就有19头猪，然后带入腿的计算公式。此外，由于条件限制本题最后的答案只有一组，在这里如果考虑存在多种情况，可以以元组的类型返回并带入比较，让数据成对出现。
+代码
+def solve(heads,legs):
+    for pork in range(0,heads+1): #给定pork的范围
+        chik = heads - pork             
+        totleg = 4*pork + 2*chik
+        if totleg==legs:
+            return(pork,chik)
+    return(None,None)                  #此处用None确保返回的结果是正确答案
+def barnyard():
+    heads = int(raw_input('enter the number of heads:'))
+    legs = int(raw_input('enter the number of legs:'))
+    (pork, chik) = solve(heads,legs)#元组中整型数据的输入(,)和用，的是一样的话那pork,chik和(pork.chik)其
+    if chik == None:                          实是一样的？运行没问题，暂时先这样认为好了
+        print 'none'
+    else:
+        print 'pork is :' , pork
+        print 'chik is :' , chik
