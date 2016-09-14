@@ -1,4 +1,4 @@
-#-*- coding:utf-8 -*-
+#coding:utf-8
 # weight:kg
 # hight:m
 a = input ('please input your weight:')
